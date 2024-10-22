@@ -6,6 +6,8 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   border-bottom: 0.2px solid purple;
+  position: relative; /* Para manter o contexto do z-index */
+  z-index: 10; /* Z-index para garantir que o contêiner esteja acima do conteúdo */
 `;
 
 export const Content = styled.div`
@@ -28,13 +30,14 @@ export const NavLinks = styled.nav`
   
   @media (max-width: 560px) {
     flex-direction: column;
-    background-color: #161616;
-    position: fixed;
+    background-color: #333;
+    position: fixed; /* Faz o menu fixo na tela */
     height: 100%;
     top: 0;
     right: 0;
     width: 60%;
     right: ${props => props.sidebar ? '0' : '-100%'};
+    z-index: 20; /* Z-index alto para sobrepor outros elementos */
 
     a {
       margin-top: 100px;
@@ -51,19 +54,20 @@ export const Ancora = styled.a`
   font-size: 20px;
   color: white;
   transition: 0.9s;
-    .translucent-icon {
-      margin: 10px;
+  
+  .translucent-icon {
+    margin: 10px;
+  }
+  
+  &:hover {
+    color: purple;
+  }
 
-    }
-    &:hover {
-      color: purple;
-    }
-
-    @media (min-width: 560px) {
-      align-items: center;
-      display: flex;
-      padding: 0px 10px;
-    }
+  @media (min-width: 560px) {
+    align-items: center;
+    display: flex;
+    padding: 0px 10px;
+  }
 `;
 
 export const Menu = styled.div`

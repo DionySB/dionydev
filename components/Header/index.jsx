@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { Container, Title, NavLinks, Ancora, Content, Menu, CloseSidebar, ContentTitle, SubTitle } from './styled';
+import Whatsapp from '../Whatsapp';
 
 export default function Header() {
     const [sidebar, setSidebar] = useState(false);
-
-    const showSidebar = () => setSidebar(!sidebar);
-
+    const toggleSidebar = () => setSidebar(!sidebar);
     const closeSidebar = () => setSidebar(false);
 
     return (
@@ -19,12 +17,13 @@ export default function Header() {
                     <SubTitle>Developer</SubTitle>
                 </ContentTitle>
 
-                <Menu onClick={showSidebar}>
+                <Menu onClick={toggleSidebar}>
                     <FaBars />
+                    <Whatsapp />
                 </Menu>
 
                 <NavLinks sidebar={sidebar}>
-                    <CloseSidebar onClick={showSidebar}>
+                    <CloseSidebar onClick={closeSidebar}>
                         <FaTimes />
                     </CloseSidebar>
 

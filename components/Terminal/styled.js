@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const TerminalWindow = styled.div`
   .terminal-window {
     text-align: left;
+    width: 100%;
     width: 600px;
     height: 360px;
     margin: auto;
@@ -10,11 +11,10 @@ export const TerminalWindow = styled.div`
     border-style: solid; 
     border-color: #333; 
     border-radius: 8px;
-    border-width: 1px 1px 6px 0px; /* Cima, Direita, Fundo, Esquerda */
-
-    	-webkit-box-shadow: 0 0 20px grey;
-	        box-shadow: 0 0 20px grey;
-
+    border-width: 1px 1px 6px 0px;
+    -webkit-box-shadow: 0 0 20px grey;
+    box-shadow: 0 0 20px grey;
+    overflow: hidden;
   }
 
   .terminal-window header {
@@ -59,12 +59,12 @@ export const TerminalWindow = styled.div`
   }
 
   .terminal-window section.terminal .prompt-line {
-    margin-bottom: 15px; /* Espaço entre comandos */
+    margin-bottom: 15px; 
   }
 
   .terminal-window section.terminal .typed-cursor {
     opacity: 1;
-    animation: blink 0.7s infinite;
+    animation: red blink  0.7s infinite;
   }
 
   @keyframes blink {
@@ -74,17 +74,17 @@ export const TerminalWindow = styled.div`
   }
 
   .terminal-window .output {
-    color: #8A8F98; /* Cor diferente para outputs */
-    margin-bottom: 15px; /* Espaço abaixo do output */
-    white-space: pre-line; /* Preserva quebras de linha nos outputs */
+    color: #8A8F98; 
+    margin-bottom: 15px; 
+    white-space: pre-line;
   }
 
   .terminal-window .command {
-    color: #FFFFFF; /* Cor branca para os comandos */
+    color: #FFFFFF; 
   }
 
   .terminal-window .prompt {
-    color: #00FF00; /* Cor vibrante para o $ */
+    color: #00FF00;
   }
 
   .terminal-window .typed-cursor {
@@ -101,5 +101,21 @@ export const TerminalWindow = styled.div`
 
   .terminal-window .green {
     color: green;
+  }
+
+  @media (max-width: 768px) {
+    .terminal-window {
+      width: 300px; 
+    }
+
+    .terminal-window section.terminal {
+      font-size: 10pt;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .terminal-window section.terminal {
+      font-size: 9pt;
+    }
   }
 `;

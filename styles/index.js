@@ -10,7 +10,6 @@ export const Container = styled.div`
 export const Content = styled.div`
   width: 1120px;
   height: 100%;
-  justify-content: space-around;
   display: flex;
   align-items: center;
   padding-right: 1px;
@@ -21,7 +20,7 @@ export const Content = styled.div`
   }
   
   @media (max-width: 760px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-around;
   }
 `;
@@ -33,7 +32,10 @@ export const Infos = styled.div`
   padding-right: 50px;
 
   @media (max-width: 760px) {
-    width: 90%;
+    width: 30%;
+    display: column;
+    padding-right: 0px;
+
   }
 `;
 
@@ -60,6 +62,11 @@ export const Intro = styled.span`
   @media (max-width: 760px) {
     font-size: 15px;
   }
+
+    @media (max-width: 480px) {
+      font-size: 9pt;
+    }
+  
 `;
 
 
