@@ -33,7 +33,7 @@ export default function Terminal() {
         'wget installed successfully.'
     },
     {
-      cmd: 'wget https://drive.google.com/uc?export=download&id=1ttv_CZrDpmqG7WPMxLwK0OLBofPCRn5_',
+      cmd: 'wget https://drive.google.com/uc?export=download&id=1XI_mgJ7r9bvj8rE_Biyk3t7KI5BIcfE-',
       output: 
         'Connecting to drive.google.com (drive.google.com)|172.217.1.206|:443... connected.\n' +
         'HTTP request sent, awaiting response... 302 Found\n' +
@@ -145,7 +145,7 @@ export default function Terminal() {
       terminalSectionRef.current.scrollTop = terminalSectionRef.current.scrollHeight;
 
       setTimeout(() => {
-        window.location.href = 'https://drive.google.com/uc?export=download&id=1ttv_CZrDpmqG7WPMxLwK0OLBofPCRn5_';
+        window.location.href = 'https://drive.google.com/uc?export=download&id=1XI_mgJ7r9bvj8rE_Biyk3t7KI5BIcfE-';
       }, 1000); 
     }, 1000);
   };
